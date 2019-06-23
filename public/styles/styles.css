@@ -275,6 +275,7 @@ main button {
   position: fixed;
   right: 0;
   top: 0;
+  padding: 10px;
   background: #0c0c0c;
   color: #f2f2f2; }
 
@@ -335,7 +336,7 @@ header svg.mobileSVG {
     .projectsPage nav ul li a:focus,
     .contactPage nav ul li a:hover,
     .contactPage nav ul li a:focus {
-      color: #ffae42; }
+      color: #ff9405; }
   .aboutPage h2,
   .skillsPage h2,
   .projectsPage h2,
@@ -355,7 +356,7 @@ header svg.mobileSVG {
   .socialContacts a {
     padding: 8px; }
   .socialContacts a:hover, .socialContacts a:focus {
-    color: #ffae42; }
+    color: #ff9405; }
 
 @-webkit-keyframes fadeIn {
   0% {
@@ -411,7 +412,7 @@ header svg.mobileSVG {
     stroke: #0c0c0c;
     stroke-width: 2; }
   20%, 40%, 65%, 75%, 100% {
-    stroke: #ffae42;
+    stroke: #ff9405;
     stroke-width: 7; } }
 
 @keyframes flickeringLight {
@@ -419,7 +420,7 @@ header svg.mobileSVG {
     stroke: #0c0c0c;
     stroke-width: 2; }
   20%, 40%, 65%, 75%, 100% {
-    stroke: #ffae42;
+    stroke: #ff9405;
     stroke-width: 7; } }
 
 .lightbulb-coil {
@@ -524,7 +525,7 @@ header svg.mobileSVG {
         -webkit-transition: 0.3s ease-out;
         transition: 0.3s ease-out; }
       .landingPage ul li a:hover, .landingPage ul li a:focus {
-        background: #ffae42; }
+        background: #ff9405; }
   .landingPage .firstNav li :nth-of-type(1) {
     -webkit-transform: rotate(20deg);
             transform: rotate(20deg); }
@@ -545,7 +546,7 @@ header svg.mobileSVG {
     top: -30px;
     left: -90px; }
     .aboutPage svg #Path-2 {
-      stroke: #ffae42; }
+      stroke: #ff9405; }
   .aboutPage > div {
     height: 80%;
     display: -webkit-box;
@@ -659,7 +660,7 @@ header svg.mobileSVG {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 4vh 0; }
+  margin: 6vh 0; }
   .projectsPage section > div {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 70%;
@@ -701,7 +702,10 @@ header svg.mobileSVG {
     -webkit-transition: 0.3s ease-out;
     transition: 0.3s ease-out; }
   .projectsPage section a:hover, .projectsPage section a:focus {
-    background: #ffae42; }
+    background: #ff9405; }
+
+.projectsPage aside {
+  font-style: italic; }
 
 .contactPage main {
   display: -webkit-box;
@@ -771,7 +775,7 @@ header svg.mobileSVG {
   .contactPage form textarea:hover,
   .contactPage form textarea:focus,
   .contactPage form textarea:active {
-    border-color: #ffae42; }
+    border-color: #ff9405; }
 
 .contactPage form button {
   border: none;
@@ -791,7 +795,7 @@ header svg.mobileSVG {
 .contactPage .emailAddress {
   margin-top: 2vh; }
   .contactPage .emailAddress a:hover, .contactPage .emailAddress a:focus {
-    color: #ffae42; }
+    color: #ff9405; }
 
 .contactPage .antiBot {
   display: none; }

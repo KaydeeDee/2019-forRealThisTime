@@ -4,7 +4,7 @@ $black: rgb(12,12,12);
 $white: rgb(242,242,242);
 $darkerWhite: darken($white, 8);
 
-$accent: rgb(255,174,66);
+$accent: darken(rgb(255,174,66), 12);
 
 // font size
 

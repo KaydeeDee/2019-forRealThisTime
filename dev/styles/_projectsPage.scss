@@ -2,7 +2,7 @@
     section {
         display: flex;
         align-items: center;
-        margin: 4vh 0;
+        margin: 6vh 0;
 
         > div {
             flex: 0 1 70%;
@@ -65,5 +65,9 @@
         #{$a-focus-hover} {
             background: $accent;
         }
+    }
+
+    aside {
+        font-style: italic;
     }
 }
