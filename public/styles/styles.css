@@ -236,9 +236,9 @@ h1 {
   font-size: calc(2.8rem + 1vw);
   letter-spacing: 2px; }
 
-svg, img {
-  max-width: 100%;
-  shape-rendering: geometricPrecision; }
+svg,
+img {
+  max-width: 100%; }
 
 body {
   -webkit-transition: 0.3s ease-out;
@@ -393,26 +393,24 @@ header svg.mobileSVG {
 @-webkit-keyframes flickeringLight {
   0%, 25%, 50%, 70% {
     stroke: #0c0c0c;
-    stroke-width: 2; }
+    stroke-width: 1.2; }
   20%, 40%, 65%, 75%, 100% {
     stroke: #ff9405;
-    stroke-width: 7; } }
+    stroke-width: 1.8; } }
 
 @keyframes flickeringLight {
   0%, 25%, 50%, 70% {
     stroke: #0c0c0c;
-    stroke-width: 2; }
+    stroke-width: 1.2; }
   20%, 40%, 65%, 75%, 100% {
     stroke: #ff9405;
-    stroke-width: 7; } }
+    stroke-width: 1.8; } }
 
 .lightbulb-coil {
-  stroke-dasharray: 730.0150146484375;
-  stroke-dashoffset: 730.0150146484375;
-  -webkit-filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2)) blur(0.8px);
-          filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2)) blur(0.8px);
-  -webkit-animation: lightbulbCoil 1.8s linear .5s 1 forwards, flickeringLight 1.2s ease-in 2.3s 1 forwards;
-          animation: lightbulbCoil 1.8s linear .5s 1 forwards, flickeringLight 1.2s ease-in 2.3s 1 forwards; }
+  stroke-dasharray: 122.69259643554688;
+  stroke-dashoffset: 122.69259643554688;
+  -webkit-animation: lightbulbCoil 1.8s linear .5s 1 forwards, flickeringLight 1.4s ease-in 2.3s 1 forwards;
+          animation: lightbulbCoil 1.8s linear .5s 1 forwards, flickeringLight 1.4s ease-in 2.3s 1 forwards; }
 
 /* main section of lightbulb */
 @-webkit-keyframes lightbulbMain {
@@ -423,8 +421,8 @@ header svg.mobileSVG {
     stroke-dashoffset: 0; } }
 
 .lightbulb-main {
-  stroke-dasharray: 1008.9489135742188;
-  stroke-dashoffset: 1008.9489135742188;
+  stroke-dasharray: 170.1072235107422;
+  stroke-dashoffset: 170.1072235107422;
   -webkit-animation: lightbulbMain 1s linear 0s 1 forwards;
           animation: lightbulbMain 1s linear 0s 1 forwards; }
 
@@ -437,8 +435,8 @@ header svg.mobileSVG {
     stroke-dashoffset: 0; } }
 
 .lightbulb-bottom {
-  stroke-dasharray: 799.3607788085938;
-  stroke-dashoffset: 799.3607788085938;
+  stroke-dasharray: 198.2691192626953;
+  stroke-dashoffset: 198.2691192626953;
   -webkit-animation: lightbulbBottom 1.3s linear .5s 1 forwards;
           animation: lightbulbBottom 1.3s linear .5s 1 forwards; }
 
@@ -475,12 +473,12 @@ header svg.mobileSVG {
     display: -ms-flexbox;
     display: flex; }
   .landingPage svg {
-    min-width: 280px;
+    min-width: 250px;
     -ms-flex-item-align: center;
         align-self: center;
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 400px;
-            flex: 0 1 400px; }
+        -ms-flex: 0 1 300px;
+            flex: 0 1 300px; }
   .landingPage ul {
     margin: 0 .5vw; }
     .landingPage ul li {

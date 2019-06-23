@@ -3,6 +3,9 @@
 // const lightbulbBottomSVG = document.querySelector('.lightbulb-bottom');
 // const test = lightbulbBottomSVG.getTotalLength();
 $(function () {
+  // const lightbulbBottomSVG = document.querySelector('.lightbulb-bottom');
+  // const test = lightbulbBottomSVG.getTotalLength();
+  // console.log(test);
   $("#fontButton").click(function () {
     $("#body").toggleClass("dxyFont");
     $(this).text(function (_, oldText) {
