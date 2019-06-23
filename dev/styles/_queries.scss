@@ -1,9 +1,45 @@
+@media (max-width: 1040px) {
+      // global changes
+    // svg next to headers for mobile
+    header .mobileSVG {
+        display: block;
+    }
+
+    .projectsPage {
+        section {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        section > img, section:nth-of-type(2n) img {
+            margin: 0;
+            margin: 4vh 0 8vh;
+        }
+
+        section > div {
+            order: -1;
+        }
+    }
+    // end of projects page
+
+    // svg images removed
+    .skillsPage,
+    .aboutPage,
+    .contactPage,
+    .projectsPage {
+        > img {
+            display: none;
+        }
+    }
+}
+// end of 1040px
+
 @media (max-width:580px) {
 
     .landingPage {
         svg {
             order: -1;
-            margin: 2vh 0;
+            margin: 4vh 0;
         }
 
         main {
@@ -25,7 +61,7 @@
             }
 
             a {
-                margin: 1.2vw;
+                margin: 2.5vw;
             }
 
         }
@@ -40,38 +76,10 @@
     }
     // end of skills page
 
-    .aboutPage {
-        header {
-            margin-top: 6vh;
-        }
-    }
-    // end of about page
-
-    .projectsPage {
-        section > img, section:nth-of-type(2n) img {
-            margin-right: 0;
-            margin-top: 4vh;
-        }
-
-        section > div {
-            order: -1;
-        }
-    }
-    // end of projects page
-
-    // global changes
-    // svg next to headers for mobile
-    header svg.mobileSVG {
-        display: block;
-    }
-
-    // svg images removed
-    .skillsPage,
-    .aboutPage,
-    .contactPage,
-    .projectsPage {
-        > img {
-            display: none;
+    .contactPage, .aboutPage {
+        .socialContacts {
+            justify-content: center;
+            font-size: 5.2rem;
         }
     }
 
@@ -80,7 +88,11 @@
 
 @media (max-width:535px) {
     body {
-        padding-top: 8vh;
+        padding-top: 4vh;
+    }
+
+    .stickyFooter {
+        min-height: 100vh;
     }
 
     .fontButton {
@@ -95,14 +107,34 @@
     .aboutPage,
     .contactPage,
     .projectsPage {
-        padding-top: 4vh;
-        
-        .hamMenu {
-            display: block;
+        padding-top: 8vh;
+    }
 
-            ~ nav {
-                display: none;
+    .hamMenu {
+        display: block;
+
+    ~ nav {
+            display: none;
+        }
+    }
+
+    .skillsPage {
+        .techSkills ul {
+            font-size: 4.5rem;
+        }
+    }
+}
+// end of 535
+
+@media (max-width:400px) {
+.hamMenu.open {
+
+        ~ nav {
+
+            ul {
+                left: 30%;
             }
+
         }
     }
 }

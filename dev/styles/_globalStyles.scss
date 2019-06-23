@@ -44,11 +44,11 @@ body {
         margin: 0 auto;
     }
 
-    .stickyFooter {
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-    }
+.stickyFooter {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
 
 //footer
 footer {
@@ -58,21 +58,28 @@ footer {
     font-size: calc(1rem + .3vw);
 }
 
+// general button
+button {
+     padding: 12px;
+    background: $black;
+    color: $white;
+}
+
 // fixed button
-main button {
+.fontButton {
         position: fixed;
         right: 0;
         bottom: 0;
         padding: 12px;
         background: $black;
         color: $white;
+        font-size: calc(1rem + 0.4vw);
     }
 
 // svg in header for mobile
-header svg.mobileSVG {
-    width: 50px;
-    position: static;
-    margin-left: 12px;
+header .mobileSVG {
+    width: 45px;
+    margin-right: 12px;
     display: none;
 }
 
@@ -89,6 +96,10 @@ header svg.mobileSVG {
     header {
         display: flex;
         align-items: center;
+    }
+
+    nav {
+        margin-bottom: 4vh;
     }
 
     nav ul {

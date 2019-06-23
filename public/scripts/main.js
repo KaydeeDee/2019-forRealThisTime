@@ -14,7 +14,7 @@ $(function () {
   });
   $("#hamMenu").click(function () {
     $(this).toggleClass("open");
-    $(".hamMenu .hamInner").toggleClass("clicked");
+    $(".hamMenu .hamInner").toggleClass("clicked").fadeIn();
     $("open ul li a").click(function () {
       $("#hamMenu").removeClass("open");
     });
