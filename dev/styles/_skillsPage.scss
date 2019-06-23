@@ -1,0 +1,68 @@
+.skillsPage {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+
+    header {
+        margin-bottom: 2vh;
+    }
+
+    > div {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    main,
+    .techSkills {
+
+        > div {
+            padding: 18px 30px;
+            background: $darkerWhite;
+
+            > h2 {
+                font-size: calc(2rem + .8vw);
+            }
+        }
+
+        .flexContainer {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+    
+    section {
+        flex: 1 1 400px;
+        margin: 2vh 0;
+    }
+
+    .essentialSkills section:nth-child(2n) {
+        margin-left: 4vw;
+    }
+
+    h3 {
+        margin-bottom: .5vh;
+        font-weight: 500;
+    }
+
+    .techSkills {
+        margin-top: 4vh;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            align-content: space-around;
+            font-size: calc(3rem + 1.5vw);
+            margin-top: 2vh;
+
+            li {
+                margin: 0 2vw;
+            }
+        }
+    }
+
+}

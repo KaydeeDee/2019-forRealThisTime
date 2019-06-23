@@ -1,0 +1,83 @@
+.landingPage {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    
+    header {
+        margin: 8vh 0 0;
+        text-align: center;
+
+        h1 {
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: calc(2rem + .6vw);
+        }
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section {
+        display: flex;
+
+    }
+
+    svg {
+        min-width: 280px;
+        align-self: center;
+        flex: 0 1 400px;
+    }
+
+    ul {
+        margin: 0 .5vw;
+
+        li {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            a { 
+                background: $black;
+                color: $white;
+                letter-spacing: 1.3px;
+                padding: 10px 14px;
+                margin: 12vh 0;
+                font-size: calc(2rem + .4vw);
+                transition: $trans;
+            }
+
+             #{$a-focus-hover} {
+                    background: $accent;
+                }
+        }
+    }
+
+    .firstNav {
+        li {
+            :nth-of-type(1){
+                    transform: rotate(20deg);
+                }
+            }
+
+            :nth-of-type(2){
+                transform: rotate(-20deg);
+            } 
+    }
+
+    .secondNav {
+        li {
+            :nth-of-type(1) {
+                    transform: rotate(-20deg);
+                }
+            }
+
+            :nth-of-type(2){
+                transform: rotate(20deg);
+            } 
+    }
+}

@@ -1,0 +1,56 @@
+// colors
+
+$black: rgb(12,12,12);
+$white: rgb(242,242,242);
+$darkerWhite: darken($white, 8);
+
+$accent: rgb(255,174,66);
+
+// font size
+
+@mixin fontSize($sizeValue){
+    font-size: $sizeValue * 1px;
+    font-size: ($sizeValue/10) * 1rem;
+}
+
+$trans: 0.3s ease-out;
+
+$svg-path: '#Path-2';
+$a-focus-hover: 'a:hover, a:focus';
+
+$test: 'li a';
+$colorAccent: 'color: $accent';
+
+$target: if(true, "&", "");
+
+@mixin trying {
+    // @if #{$test} == #{$colorAccent} {
+    //     + div svg #{$svg-path} {
+    //         // stroke: blue;
+    //     }
+    // }
+
+        #{$test} { 
+            &:hover,
+            &:focus,
+            #{$target} {
+                + div svg #{$svg-path} {
+                    stroke: pink;
+                }
+            }
+        }   
+}
+
+// if on hover
+// @mixin anchorHover($color) {
+//     color: $color;
+//     @if $color == $accent {
+//         // #{$svg-path} {
+//         //     stroke: blue;
+
+//         // }
+//         font-size: 2px;
+//     }
+// }
+
+

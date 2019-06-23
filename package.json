@@ -1,0 +1,27 @@
+{
+  "name": "katieDAngeloPortfolio",
+  "version": "1.0.1",
+  "description": "Portfolio Website",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Katie D'Angelo"
+  ],
+  "author": "Katie D'Angelo",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.1.5",
+    "@babel/preset-env": "^7.1.5",
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {
+    "prettify": "^0.1.7"
+  }
+}

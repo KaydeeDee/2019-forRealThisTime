@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "OpenDyslexic-Regular";
+    src: url(../../public/assets/font/OpenDyslexic2/OpenDyslexic-Regular.otf)
+}
+
+html {
+    font-size: 62.5%;
+}
+
+header {
+    font-family: 'Montserrat', sans-serif;
+
+    h1,
+    h2 {
+        font-weight: 500;
+    }
+}
+
+.dxyFont {
+    font-family: OpenDyslexic-Regular;
+}
+
+
