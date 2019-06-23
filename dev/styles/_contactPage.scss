@@ -7,6 +7,10 @@
         justify-content: center;
     }
 
+    header {
+        margin-bottom: 4vh;
+    }
+
     > img {
         position: absolute;
         left: -150px;
@@ -14,7 +18,7 @@
 
     section > div {
         display: flex;
-        flex: 0 1 50%;
+        flex: 1 1 400px;
 
         .personalInfo {
             margin-top: 4vh;
@@ -31,9 +35,12 @@
 
     section, form {
         display: flex;
+        flex-wrap: wrap;
     }
     
     form {
+        margin-left: 4vh;
+        flex: 1 1 auto;
 
         > div {
             display: flex;

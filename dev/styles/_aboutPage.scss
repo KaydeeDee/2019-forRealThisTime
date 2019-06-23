@@ -1,10 +1,9 @@
 .aboutPage {
 
     > img {
-        position: fixed;
-        bottom: -10px;
-        right: 500px;
-        transform: rotate(.5turn);
+        position: absolute;
+        top: -10px;
+        right: -80px;
     } 
 
     > div {

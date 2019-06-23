@@ -1,0 +1,108 @@
+@media (max-width:580px) {
+
+    .landingPage {
+        svg {
+            order: -1;
+            margin: 2vh 0;
+        }
+
+        main {
+            flex-direction: column;
+
+            ul {
+                display: flex;
+            }
+        }
+
+        .firstNav, .secondNav {
+            li {
+                width: 150px;
+            }
+
+            li:nth-of-type(1),
+            li:nth-of-type(2) {
+                transform: none;
+            }
+
+            a {
+                margin: 1.2vw;
+            }
+
+        }
+
+    }
+    // end of landing page
+
+    .skillsPage {
+        .essentialSkills section:nth-child(2n) {
+            margin-left: 0;
+        }
+    }
+    // end of skills page
+
+    .aboutPage {
+        header {
+            margin-top: 6vh;
+        }
+    }
+    // end of about page
+
+    .projectsPage {
+        section > img, section:nth-of-type(2n) img {
+            margin-right: 0;
+            margin-top: 4vh;
+        }
+
+        section > div {
+            order: -1;
+        }
+    }
+    // end of projects page
+
+    // global changes
+    // svg next to headers for mobile
+    header svg.mobileSVG {
+        display: block;
+    }
+
+    // svg images removed
+    .skillsPage,
+    .aboutPage,
+    .contactPage,
+    .projectsPage {
+        > img {
+            display: none;
+        }
+    }
+
+}
+// end of 580
+
+@media (max-width:535px) {
+    body {
+        padding-top: 8vh;
+    }
+
+    .fontButton {
+        position: fixed;
+        top: 10px;
+        left: 0px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+
+    .skillsPage,
+    .aboutPage,
+    .contactPage,
+    .projectsPage {
+        padding-top: 4vh;
+        
+        .hamMenu {
+            display: block;
+
+            ~ nav {
+                display: none;
+            }
+        }
+    }
+}

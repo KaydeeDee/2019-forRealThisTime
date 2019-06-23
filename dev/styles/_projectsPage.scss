@@ -8,15 +8,15 @@
     section {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         margin: 6vh 0;
 
         > div {
-            flex: 0 1 70%;
+            flex: 1 1 450px;
         }
 
         img {
-            width: 420px;
-            flex-shrink: 1;
+            flex: 0 1 auto;
             margin-left: 2vw;
         }
 

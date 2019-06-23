@@ -9,7 +9,14 @@ $(function () {
   $("#fontButton").click(function () {
     $("#body").toggleClass("dxyFont");
     $(this).text(function (_, oldText) {
-      return oldText === 'Click here to return to original font' ? 'Click here to use the OpenDyslexic font' : 'Click here to return to the original font';
+      return oldText === 'Return to original font' ? 'Switch to the OpenDyslexic font' : 'Return to original font';
+    });
+  });
+  $("#hamMenu").click(function () {
+    $(this).toggleClass("open");
+    $(".hamMenu .hamInner").toggleClass("clicked");
+    $("open ul li a").click(function () {
+      $("#hamMenu").removeClass("open");
     });
   });
 });

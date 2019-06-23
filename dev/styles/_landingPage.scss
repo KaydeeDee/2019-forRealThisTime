@@ -60,25 +60,26 @@
 
     .firstNav {
         li {
-            :nth-of-type(1){
+            &:nth-of-type(1){
                     transform: rotate(20deg);
                 }
-            }
 
-            :nth-of-type(2){
+            &:nth-of-type(2){
                 transform: rotate(-20deg);
             } 
     }
+}
 
     .secondNav {
         li {
-            :nth-of-type(1) {
+            &:nth-of-type(1) {
                     transform: rotate(-20deg);
                 }
-            }
 
-            :nth-of-type(2){
+            &:nth-of-type(2n){
                 transform: rotate(20deg);
             } 
+        }
     }
+
 }

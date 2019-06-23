@@ -268,17 +268,17 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   margin: 4vh 0 2vh;
   font-size: calc(1rem + .3vw); }
 
 main button {
   position: fixed;
   right: 0;
-  top: 0;
-  padding: 10px;
+  bottom: 0;
+  padding: 12px;
   background: #0c0c0c;
   color: #f2f2f2; }
 
@@ -501,25 +501,23 @@ header svg.mobileSVG {
         transition: 0.3s ease-out; }
       .landingPage ul li a:hover, .landingPage ul li a:focus {
         background: #ff9405; }
-  .landingPage .firstNav li :nth-of-type(1) {
+  .landingPage .firstNav li:nth-of-type(1) {
     -webkit-transform: rotate(20deg);
             transform: rotate(20deg); }
-  .landingPage .firstNav :nth-of-type(2) {
+  .landingPage .firstNav li:nth-of-type(2) {
     -webkit-transform: rotate(-20deg);
             transform: rotate(-20deg); }
-  .landingPage .secondNav li :nth-of-type(1) {
+  .landingPage .secondNav li:nth-of-type(1) {
     -webkit-transform: rotate(-20deg);
             transform: rotate(-20deg); }
-  .landingPage .secondNav :nth-of-type(2) {
+  .landingPage .secondNav li:nth-of-type(2n) {
     -webkit-transform: rotate(20deg);
             transform: rotate(20deg); }
 
 .aboutPage > img {
-  position: fixed;
-  bottom: -10px;
-  right: 500px;
-  -webkit-transform: rotate(0.5turn);
-          transform: rotate(0.5turn); }
+  position: absolute;
+  top: -10px;
+  right: -80px; }
 
 .aboutPage > div {
   height: 80%;
@@ -641,15 +639,17 @@ header svg.mobileSVG {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 6vh 0; }
   .projectsPage section > div {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 70%;
-            flex: 0 1 70%; }
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 450px;
+            flex: 1 1 450px; }
   .projectsPage section img {
-    width: 420px;
-    -ms-flex-negative: 1;
-        flex-shrink: 1;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
     margin-left: 2vw; }
   .projectsPage section:nth-of-type(2n) img {
     -webkit-box-ordinal-group: 0;
@@ -700,6 +700,9 @@ header svg.mobileSVG {
       -ms-flex-pack: center;
           justify-content: center; }
 
+.contactPage header {
+  margin-bottom: 4vh; }
+
 .contactPage > img {
   position: absolute;
   left: -150px; }
@@ -708,9 +711,9 @@ header svg.mobileSVG {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-          flex: 0 1 50%; }
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 400px;
+          flex: 1 1 400px; }
   .contactPage section > div .personalInfo {
     margin-top: 4vh; }
     .contactPage section > div .personalInfo li {
@@ -725,49 +728,51 @@ header svg.mobileSVG {
 .contactPage section, .contactPage form {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
-
-.contactPage form > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-bottom: 2vh; }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
-.contactPage form textarea {
-  resize: none; }
-
-.contactPage form input {
-  width: 60%;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 30px;
-          flex: 0 0 30px;
-  min-width: 250px; }
-
-.contactPage form label {
-  margin-bottom: 1vh; }
-
-.contactPage form input,
-.contactPage form textarea {
-  border: 2px solid black;
-  background: none;
-  margin-bottom: .5vh; }
-  .contactPage form input:hover, .contactPage form input:focus, .contactPage form input:active,
-  .contactPage form textarea:hover,
-  .contactPage form textarea:focus,
-  .contactPage form textarea:active {
-    border-color: #ff9405; }
-
-.contactPage form button {
-  border: none;
-  position: static;
-  padding: 10px;
-  width: 40%;
-  -ms-flex-item-align: center;
-      align-self: center; }
+.contactPage form {
+  margin-left: 4vh;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto; }
+  .contactPage form > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 2vh; }
+  .contactPage form textarea {
+    resize: none; }
+  .contactPage form input {
+    width: 60%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30px;
+            flex: 0 0 30px;
+    min-width: 250px; }
+  .contactPage form label {
+    margin-bottom: 1vh; }
+  .contactPage form input,
+  .contactPage form textarea {
+    border: 2px solid black;
+    background: none;
+    margin-bottom: .5vh; }
+    .contactPage form input:hover, .contactPage form input:focus, .contactPage form input:active,
+    .contactPage form textarea:hover,
+    .contactPage form textarea:focus,
+    .contactPage form textarea:active {
+      border-color: #ff9405; }
+  .contactPage form button {
+    border: none;
+    position: static;
+    padding: 10px;
+    width: 40%;
+    -ms-flex-item-align: center;
+        align-self: center; }
 
 .contactPage .warningText {
   font-size: 1.6rem;
@@ -783,3 +788,178 @@ header svg.mobileSVG {
 
 .contactPage .antiBot {
   display: none; }
+
+.skillsPage .hamMenu,
+.aboutPage .hamMenu,
+.contactPage .hamMenu,
+.projectsPage .hamMenu {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  background: #f2f2f2;
+  padding: 12px;
+  z-index: 5;
+  width: 40px;
+  height: 30px; }
+  .skillsPage .hamMenu .hamInner,
+  .aboutPage .hamMenu .hamInner,
+  .contactPage .hamMenu .hamInner,
+  .projectsPage .hamMenu .hamInner {
+    display: inline-block;
+    -webkit-transition: -webkit-transform 0.75s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition: -webkit-transform 0.75s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition: transform 0.75s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition: transform 0.75s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.75s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background-color: #0c0c0c; }
+    .skillsPage .hamMenu .hamInner:after,
+    .aboutPage .hamMenu .hamInner:after,
+    .contactPage .hamMenu .hamInner:after,
+    .projectsPage .hamMenu .hamInner:after {
+      bottom: -10px; }
+    .skillsPage .hamMenu .hamInner:before,
+    .aboutPage .hamMenu .hamInner:before,
+    .contactPage .hamMenu .hamInner:before,
+    .projectsPage .hamMenu .hamInner:before {
+      top: -10px; }
+    .skillsPage .hamMenu .hamInner:before, .skillsPage .hamMenu .hamInner:after,
+    .aboutPage .hamMenu .hamInner:before,
+    .aboutPage .hamMenu .hamInner:after,
+    .contactPage .hamMenu .hamInner:before,
+    .contactPage .hamMenu .hamInner:after,
+    .projectsPage .hamMenu .hamInner:before,
+    .projectsPage .hamMenu .hamInner:after {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 4px;
+      -webkit-transition: -webkit-transform .15s ease;
+      transition: -webkit-transform .15s ease;
+      transition: transform .15s ease;
+      transition: transform .15s ease, -webkit-transform .15s ease;
+      background-color: #0c0c0c; }
+  .skillsPage .hamMenu .hamInner.clicked,
+  .aboutPage .hamMenu .hamInner.clicked,
+  .contactPage .hamMenu .hamInner.clicked,
+  .projectsPage .hamMenu .hamInner.clicked {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+    .skillsPage .hamMenu .hamInner.clicked:after,
+    .aboutPage .hamMenu .hamInner.clicked:after,
+    .contactPage .hamMenu .hamInner.clicked:after,
+    .projectsPage .hamMenu .hamInner.clicked:after {
+      bottom: 0;
+      -webkit-transition: bottom 75ms ease, -webkit-transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+      transition: bottom 75ms ease, -webkit-transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+      transition: bottom 75ms ease, transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+      transition: bottom 75ms ease, transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s, -webkit-transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+      -webkit-transform: rotate(-90deg);
+              transform: rotate(-90deg); }
+    .skillsPage .hamMenu .hamInner.clicked:before,
+    .aboutPage .hamMenu .hamInner.clicked:before,
+    .contactPage .hamMenu .hamInner.clicked:before,
+    .projectsPage .hamMenu .hamInner.clicked:before {
+      top: 0;
+      -webkit-transition: top 75ms ease, opacity 75ms ease .12s;
+      transition: top 75ms ease, opacity 75ms ease .12s;
+      opacity: 0; }
+
+.skillsPage .hamMenu.open ~ nav,
+.aboutPage .hamMenu.open ~ nav,
+.contactPage .hamMenu.open ~ nav,
+.projectsPage .hamMenu.open ~ nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(242, 242, 242, 0.95); }
+  .skillsPage .hamMenu.open ~ nav ul,
+  .aboutPage .hamMenu.open ~ nav ul,
+  .contactPage .hamMenu.open ~ nav ul,
+  .projectsPage .hamMenu.open ~ nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: block;
+    position: fixed;
+    top: 25%;
+    left: 35%; }
+    .skillsPage .hamMenu.open ~ nav ul a,
+    .aboutPage .hamMenu.open ~ nav ul a,
+    .contactPage .hamMenu.open ~ nav ul a,
+    .projectsPage .hamMenu.open ~ nav ul a {
+      font-size: 2.5rem; }
+
+@media (max-width: 580px) {
+  .landingPage svg {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin: 2vh 0; }
+  .landingPage main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .landingPage main ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+  .landingPage .firstNav li, .landingPage .secondNav li {
+    width: 150px; }
+  .landingPage .firstNav li:nth-of-type(1),
+  .landingPage .firstNav li:nth-of-type(2), .landingPage .secondNav li:nth-of-type(1),
+  .landingPage .secondNav li:nth-of-type(2) {
+    -webkit-transform: none;
+            transform: none; }
+  .landingPage .firstNav a, .landingPage .secondNav a {
+    margin: 1.2vw; }
+  .skillsPage .essentialSkills section:nth-child(2n) {
+    margin-left: 0; }
+  .aboutPage header {
+    margin-top: 6vh; }
+  .projectsPage section > img, .projectsPage section:nth-of-type(2n) img {
+    margin-right: 0;
+    margin-top: 4vh; }
+  .projectsPage section > div {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1; }
+  header svg.mobileSVG {
+    display: block; }
+  .skillsPage > img,
+  .aboutPage > img,
+  .contactPage > img,
+  .projectsPage > img {
+    display: none; } }
+
+@media (max-width: 535px) {
+  body {
+    padding-top: 8vh; }
+  .fontButton {
+    position: fixed;
+    top: 10px;
+    left: 0px;
+    height: 45px;
+    font-size: 1.2rem; }
+  .skillsPage,
+  .aboutPage,
+  .contactPage,
+  .projectsPage {
+    padding-top: 4vh; }
+    .skillsPage .hamMenu,
+    .aboutPage .hamMenu,
+    .contactPage .hamMenu,
+    .projectsPage .hamMenu {
+      display: block; }
+      .skillsPage .hamMenu ~ nav,
+      .aboutPage .hamMenu ~ nav,
+      .contactPage .hamMenu ~ nav,
+      .projectsPage .hamMenu ~ nav {
+        display: none; } }
