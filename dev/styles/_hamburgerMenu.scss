@@ -1,61 +1,16 @@
-    .hamMenu {
+    .hamContainer {
         display: none;
         position: fixed;
-        top: 20px;
-        right: 40px;
-        background: $white;
-        padding: 12px;
+        top: 15px;
+        right: 10px;
+        background: $black;
+        padding: 20px;
         z-index: 5;
-        width: 40px;
-        height: 30px;
+        width: 55px;
+        height: 55px;
         
-        .hamInner {
-            display: inline-block;
-            transition: transform 0.75s cubic-bezier(.55,.055,.675,.19);
-            position: absolute;
-            width: 40px;
-            height: 4px;
-            background-color: $black;
 
-            &:after {
-                bottom: -10px;
-
-            }
-
-            &:before {
-                top: -10px;
-            }
-
-            &:before,
-            &:after {
-                content: '';
-                position: absolute;
-                width: 40px;
-                height: 4px;
-                transition: transform .15s ease;
-                background-color: $black;
-            }
-        }
-
-        .hamInner.clicked {
-            // transition: all 0.75s cubic-bezier(.215,.61,.355,1) .12s;
-            transform: rotate(45deg);
-
-            &:after {
-                bottom: 0;
-                transition: bottom 75ms ease, transform 75ms cubic-bezier(.215,.61,.355,1) .12s;
-                transform: rotate(-90deg);
-            }
-
-            &:before {
-                top: 0;
-                transition: top 75ms ease, opacity 75ms ease .12s;
-                opacity: 0;
-            }
-        }
-    }
-
-    .hamMenu.open {
+    &.open {
 
         ~ nav {
             display: block;
@@ -64,7 +19,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: rgba($white, 0.95);
+            background: $white;
 
             ul {
                 flex-direction: column;
@@ -79,3 +34,127 @@
             }
         }
     }
+}
+
+.hamMenu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    cursor: pointer;
+
+    span {
+        display: inline-block;
+        width: 100%;
+        box-shadow: 0 2px 10px 0 rgba(0,0,0,0.3);
+        height: 6px;
+        background: $white;
+        transition: all .3s;
+        position: relative;
+    }
+
+    &.inActive {
+         span:nth-child(1) {
+            animation: ease .7s topinActive forwards;
+        }
+
+        span:nth-child(2) {
+            top: -4px;
+            animation: ease .7s scaledinActive forwards;
+        }
+
+        span:nth-child(3) {
+            animation: ease .7s bottominActive forwards;
+        }       
+    }
+
+    &.active {
+            span:nth-child(1) {
+                animation: ease .7s topActive forwards;
+            }
+
+            span:nth-child(2) {
+                    animation: ease .7s scaledActive forwards;
+            }
+
+        span:nth-child(3) {
+                animation: ease .7s bottomActive forwards;
+            }
+    }
+}
+
+@keyframes topActive {
+  0% {
+    top: 12px;
+    transform: rotate(0);
+  }
+  50% {
+    top: 26px;
+    transform: rotate(0);
+  }
+  100% {
+    top: 26px;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes topinActive {
+  0% {
+    top: 26px;
+    transform: rotate(45deg);
+  }
+  50% {
+    top: 15px;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 12px;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes bottomActive {
+  0% {
+    top: -20px;
+    transform: rotate(0);
+  }
+  50% {
+    top: -22px;
+    transform: rotate(0);
+  }
+  100% {
+    top: -37px;
+    transform: rotate(135deg);
+  }
+}
+
+@keyframes bottominActive {
+  0% {
+    top: -37px;
+    transform: rotate(135deg);
+  }
+  50% {
+    top: -20px;
+    transform: rotate(0);
+  }
+  100% {
+    top: -20px;
+    transform: rotate(0);
+  }
+}
+
+@keyframes scaledActive {
+  50%, 100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes scaledinActive {
+  0%, 50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

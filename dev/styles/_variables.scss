@@ -2,9 +2,8 @@
 
 $black: rgb(12,12,12);
 $white: rgb(242,242,242);
-$darkerWhite: darken($white, 8);
 
-$accent: darken(rgb(255,174,66), 12);
+$accent: darken(rgb(255,174,66), 2);
 
 // font size
 
@@ -16,4 +15,4 @@ $accent: darken(rgb(255,174,66), 12);
 $trans: 0.3s ease-out;
 
 $svg-path: '#Path-2';
-$a-focus-hover: 'a:hover, a:focus';
+$a-focus-hover: 'a:hover, a:focus, a:active';

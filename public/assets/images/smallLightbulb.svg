@@ -5,7 +5,7 @@
 	  viewBox="-78.5 278 56.833 87.167" enable-background="new -78.5 278 56.833 87.167"
 	 xml:space="preserve">
 <filter id="glow">
-    <feGaussianBlur in="SourceGraphic" stdDeviation=".8" />
+    <feGaussianBlur in="SourceGraphic" stdDeviation=".4" />
 </filter>
 <g id="landing">
 	<path id="Path-1_4_" fill="none" stroke="rgb(12,12,12)" d="M-40.448,345.166c1.322-11.857,5.416-15.659,9.559-20.646

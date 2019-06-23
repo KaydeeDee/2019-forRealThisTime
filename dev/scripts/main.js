@@ -16,11 +16,12 @@ $(function (){
         });
     });
 
-    $("#hamMenu").click(function() {
+    $("#hamContainer").click(function() {
         $(this).toggleClass("open");
-        $(".hamMenu .hamInner").toggleClass("clicked").fadeIn();
-        $("open ul li a").click(function() {
-            $("#hamMenu").removeClass("open");
+        $(".hamMenu").toggleClass("active");
+        $(".hamMenu").toggleClass("inActive");
+        $(".open ul li a").click(function() {
+            $("#hamContainer").removeClass("open");
         })
     })
 });

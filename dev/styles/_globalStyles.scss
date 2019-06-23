@@ -60,9 +60,16 @@ footer {
 
 // general button
 button {
-     padding: 12px;
+    padding: 12px;
     background: $black;
     color: $white;
+    border: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background: $accent;
+    }
 }
 
 // fixed button
@@ -73,7 +80,7 @@ button {
         padding: 12px;
         background: $black;
         color: $white;
-        font-size: calc(1rem + 0.4vw);
+        font-size: calc(1rem + 0.8vw);
     }
 
 // svg in header for mobile
@@ -99,7 +106,7 @@ header .mobileSVG {
     }
 
     nav {
-        margin-bottom: 4vh;
+        padding-bottom: 4vh;
     }
 
     nav ul {

@@ -11,9 +11,9 @@
             justify-content: center;
         }
 
-        section > img, section:nth-of-type(2n) img {
+        section > .portfolioImages, section:nth-of-type(2n) .portfolioImages {
             margin: 0;
-            margin: 4vh 0 8vh;
+            margin: 4vh 0;
         }
 
         section > div {
@@ -97,25 +97,30 @@
 
     .fontButton {
         position: fixed;
-        top: 10px;
+        top: 22px;
         left: 0px;
         height: 45px;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .skillsPage,
     .aboutPage,
     .contactPage,
     .projectsPage {
-        padding-top: 8vh;
+        padding-top: 10vh;
     }
 
-    .hamMenu {
+    .hamContainer {
         display: block;
 
     ~ nav {
             display: none;
         }
+    }
+
+    .projectsPage header .mobileSVG {
+        width: 60px;
+        min-width: 50px;
     }
 
     .skillsPage {
@@ -127,7 +132,7 @@
 // end of 535
 
 @media (max-width:400px) {
-.hamMenu.open {
+.hamContainer.open {
 
         ~ nav {
 
@@ -137,4 +142,10 @@
 
         }
     }
+
+.projectsPage {
+    .linksToProjects a {
+        margin-top: 2vh;
+    }
+}
 }

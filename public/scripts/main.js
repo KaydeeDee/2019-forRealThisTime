@@ -12,11 +12,12 @@ $(function () {
       return oldText === 'Return to original font' ? 'Switch to the OpenDyslexic font' : 'Return to original font';
     });
   });
-  $("#hamMenu").click(function () {
+  $("#hamContainer").click(function () {
     $(this).toggleClass("open");
-    $(".hamMenu .hamInner").toggleClass("clicked").fadeIn();
-    $("open ul li a").click(function () {
-      $("#hamMenu").removeClass("open");
+    $(".hamMenu").toggleClass("active");
+    $(".hamMenu").toggleClass("inActive");
+    $(".open ul li a").click(function () {
+      $("#hamContainer").removeClass("open");
     });
   });
 });

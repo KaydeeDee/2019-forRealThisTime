@@ -277,7 +277,10 @@ footer {
 button {
   padding: 12px;
   background: #0c0c0c;
-  color: #f2f2f2; }
+  color: #f2f2f2;
+  border: none; }
+  button:hover, button:focus, button:active {
+    background: #ffaa38; }
 
 .fontButton {
   position: fixed;
@@ -286,7 +289,7 @@ button {
   padding: 12px;
   background: #0c0c0c;
   color: #f2f2f2;
-  font-size: calc(1rem + 0.4vw); }
+  font-size: calc(1rem + 0.8vw); }
 
 header .mobileSVG {
   width: 45px;
@@ -322,7 +325,7 @@ header .mobileSVG {
   .skillsPage nav,
   .projectsPage nav,
   .contactPage nav {
-    margin-bottom: 4vh; }
+    padding-bottom: 4vh; }
   .aboutPage nav ul,
   .skillsPage nav ul,
   .projectsPage nav ul,
@@ -343,14 +346,17 @@ header .mobileSVG {
       letter-spacing: 1.5px;
       -webkit-transition: 0.3s ease-out;
       transition: 0.3s ease-out; }
-    .aboutPage nav ul li a:hover, .aboutPage nav ul li a:focus,
+    .aboutPage nav ul li a:hover, .aboutPage nav ul li a:focus, .aboutPage nav ul li a:active,
     .skillsPage nav ul li a:hover,
     .skillsPage nav ul li a:focus,
+    .skillsPage nav ul li a:active,
     .projectsPage nav ul li a:hover,
     .projectsPage nav ul li a:focus,
+    .projectsPage nav ul li a:active,
     .contactPage nav ul li a:hover,
-    .contactPage nav ul li a:focus {
-      color: #ff9405; }
+    .contactPage nav ul li a:focus,
+    .contactPage nav ul li a:active {
+      color: #ffaa38; }
   .aboutPage h2,
   .skillsPage h2,
   .projectsPage h2,
@@ -369,8 +375,8 @@ header .mobileSVG {
     margin-left: 0; }
   .socialContacts a {
     padding: 8px; }
-  .socialContacts a:hover, .socialContacts a:focus {
-    color: #ff9405; }
+  .socialContacts a:hover, .socialContacts a:focus, .socialContacts a:active {
+    color: #ffaa38; }
 
 @-webkit-keyframes fadeIn {
   0% {
@@ -405,7 +411,7 @@ header .mobileSVG {
     stroke: #0c0c0c;
     stroke-width: 1.2; }
   20%, 40%, 65%, 75%, 100% {
-    stroke: #ff9405;
+    stroke: #ffaa38;
     stroke-width: 1.8; } }
 
 @keyframes flickeringLight {
@@ -413,7 +419,7 @@ header .mobileSVG {
     stroke: #0c0c0c;
     stroke-width: 1.2; }
   20%, 40%, 65%, 75%, 100% {
-    stroke: #ff9405;
+    stroke: #ffaa38;
     stroke-width: 1.8; } }
 
 .lightbulb-coil {
@@ -509,8 +515,8 @@ header .mobileSVG {
         font-size: calc(2rem + .4vw);
         -webkit-transition: 0.3s ease-out;
         transition: 0.3s ease-out; }
-      .landingPage ul li a:hover, .landingPage ul li a:focus {
-        background: #ff9405; }
+      .landingPage ul li a:hover, .landingPage ul li a:focus, .landingPage ul li a:active {
+        background: #ffaa38; }
   .landingPage .firstNav li:nth-of-type(1) {
     -webkit-transform: rotate(20deg);
             transform: rotate(20deg); }
@@ -617,8 +623,8 @@ header .mobileSVG {
   left: -90px; }
 
 .projectsPage .boxShadowImage {
-  -webkit-box-shadow: 0px 0px 6px #8c8c8c;
-          box-shadow: 0px 0px 6px #8c8c8c; }
+  -webkit-box-shadow: 1px 2px 10px 0px rgba(12, 12, 12, 0.1);
+          box-shadow: 1px 2px 10px 0px rgba(12, 12, 12, 0.1); }
 
 .projectsPage section {
   display: -webkit-box;
@@ -627,18 +633,18 @@ header .mobileSVG {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 6vh 0; }
+  margin: 6vh 0;
+  -webkit-box-shadow: 1px 2px 10px 0px rgba(12, 12, 12, 0.1);
+          box-shadow: 1px 2px 10px 0px rgba(12, 12, 12, 0.1);
+  padding: 20px; }
   .projectsPage section > div {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto; }
-  .projectsPage section img {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 2 auto;
-            flex: 0 2 auto;
-    max-width: 500px;
-    margin-left: 2vw; }
-  .projectsPage section:nth-of-type(2n) img {
+  .projectsPage section .portfolioImages {
+    margin-left: 2vw;
+    min-width: 40%; }
+  .projectsPage section:nth-of-type(2n) .portfolioImages {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
@@ -649,7 +655,7 @@ header .mobileSVG {
     border-radius: 4px;
     padding: 2px 6px;
     display: inline-block;
-    font-size: calc(1.2rem + 0.2vw); }
+    font-size: calc(1.5rem + 0.2vw); }
   .projectsPage section p, .projectsPage section span, .projectsPage section .linksToProjects {
     margin-top: 2vh; }
   .projectsPage section .webDev {
@@ -669,11 +675,12 @@ header .mobileSVG {
     margin-right: 1vh;
     -webkit-transition: 0.3s ease-out;
     transition: 0.3s ease-out; }
-  .projectsPage section a:hover, .projectsPage section a:focus {
-    background: #ff9405; }
+  .projectsPage section a:hover, .projectsPage section a:focus, .projectsPage section a:active {
+    background: #ffaa38; }
 
 .projectsPage aside {
-  font-style: italic; }
+  font-style: italic;
+  margin-top: 4vh; }
 
 .contactPage main {
   display: -webkit-box;
@@ -752,7 +759,7 @@ header .mobileSVG {
     .contactPage form textarea:hover,
     .contactPage form textarea:focus,
     .contactPage form textarea:active {
-      border-color: #ff9405; }
+      border-color: #ffaa38; }
   .contactPage form button {
     border: none;
     position: static;
@@ -770,82 +777,217 @@ header .mobileSVG {
 
 .contactPage .emailAddress {
   margin-top: 2vh; }
-  .contactPage .emailAddress a:hover, .contactPage .emailAddress a:focus {
-    color: #ff9405; }
+  .contactPage .emailAddress a:hover, .contactPage .emailAddress a:focus, .contactPage .emailAddress a:active {
+    color: #ffaa38; }
 
 .contactPage .antiBot {
   display: none; }
 
-.hamMenu {
+.hamContainer {
   display: none;
   position: fixed;
-  top: 20px;
-  right: 40px;
-  background: #f2f2f2;
-  padding: 12px;
+  top: 15px;
+  right: 10px;
+  background: #0c0c0c;
+  padding: 20px;
   z-index: 5;
-  width: 40px;
-  height: 30px; }
-  .hamMenu .hamInner {
-    display: inline-block;
-    -webkit-transition: -webkit-transform 0.75s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    transition: -webkit-transform 0.75s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    transition: transform 0.75s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    transition: transform 0.75s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.75s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    position: absolute;
-    width: 40px;
-    height: 4px;
-    background-color: #0c0c0c; }
-    .hamMenu .hamInner:after {
-      bottom: -10px; }
-    .hamMenu .hamInner:before {
-      top: -10px; }
-    .hamMenu .hamInner:before, .hamMenu .hamInner:after {
-      content: '';
-      position: absolute;
-      width: 40px;
-      height: 4px;
-      -webkit-transition: -webkit-transform .15s ease;
-      transition: -webkit-transform .15s ease;
-      transition: transform .15s ease;
-      transition: transform .15s ease, -webkit-transform .15s ease;
-      background-color: #0c0c0c; }
-  .hamMenu .hamInner.clicked {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg); }
-    .hamMenu .hamInner.clicked:after {
-      bottom: 0;
-      -webkit-transition: bottom 75ms ease, -webkit-transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
-      transition: bottom 75ms ease, -webkit-transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
-      transition: bottom 75ms ease, transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
-      transition: bottom 75ms ease, transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s, -webkit-transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
-      -webkit-transform: rotate(-90deg);
-              transform: rotate(-90deg); }
-    .hamMenu .hamInner.clicked:before {
-      top: 0;
-      -webkit-transition: top 75ms ease, opacity 75ms ease .12s;
-      transition: top 75ms ease, opacity 75ms ease .12s;
-      opacity: 0; }
-
-.hamMenu.open ~ nav {
-  display: block;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(242, 242, 242, 0.95); }
-  .hamMenu.open ~ nav ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  width: 55px;
+  height: 55px; }
+  .hamContainer.open ~ nav {
     display: block;
     position: fixed;
-    top: 25%;
-    left: 35%; }
-    .hamMenu.open ~ nav ul a {
-      font-size: 2.5rem; }
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #f2f2f2; }
+    .hamContainer.open ~ nav ul {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      display: block;
+      position: fixed;
+      top: 25%;
+      left: 35%; }
+      .hamContainer.open ~ nav ul a {
+        font-size: 2.5rem; }
+
+.hamMenu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 70%;
+  cursor: pointer; }
+  .hamMenu span {
+    display: inline-block;
+    width: 100%;
+    -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+    height: 6px;
+    background: #f2f2f2;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    position: relative; }
+  .hamMenu.inActive span:nth-child(1) {
+    -webkit-animation: ease .7s topinActive forwards;
+            animation: ease .7s topinActive forwards; }
+  .hamMenu.inActive span:nth-child(2) {
+    top: -4px;
+    -webkit-animation: ease .7s scaledinActive forwards;
+            animation: ease .7s scaledinActive forwards; }
+  .hamMenu.inActive span:nth-child(3) {
+    -webkit-animation: ease .7s bottominActive forwards;
+            animation: ease .7s bottominActive forwards; }
+  .hamMenu.active span:nth-child(1) {
+    -webkit-animation: ease .7s topActive forwards;
+            animation: ease .7s topActive forwards; }
+  .hamMenu.active span:nth-child(2) {
+    -webkit-animation: ease .7s scaledActive forwards;
+            animation: ease .7s scaledActive forwards; }
+  .hamMenu.active span:nth-child(3) {
+    -webkit-animation: ease .7s bottomActive forwards;
+            animation: ease .7s bottomActive forwards; }
+
+@-webkit-keyframes topActive {
+  0% {
+    top: 12px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  50% {
+    top: 26px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  100% {
+    top: 26px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); } }
+
+@keyframes topActive {
+  0% {
+    top: 12px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  50% {
+    top: 26px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  100% {
+    top: 26px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); } }
+
+@-webkit-keyframes topinActive {
+  0% {
+    top: 26px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  50% {
+    top: 15px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    top: 12px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); } }
+
+@keyframes topinActive {
+  0% {
+    top: 26px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  50% {
+    top: 15px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    top: 12px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); } }
+
+@-webkit-keyframes bottomActive {
+  0% {
+    top: -20px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  50% {
+    top: -22px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  100% {
+    top: -37px;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg); } }
+
+@keyframes bottomActive {
+  0% {
+    top: -20px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  50% {
+    top: -22px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  100% {
+    top: -37px;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg); } }
+
+@-webkit-keyframes bottominActive {
+  0% {
+    top: -37px;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg); }
+  50% {
+    top: -20px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  100% {
+    top: -20px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0); } }
+
+@keyframes bottominActive {
+  0% {
+    top: -37px;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg); }
+  50% {
+    top: -20px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  100% {
+    top: -20px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0); } }
+
+@-webkit-keyframes scaledActive {
+  50%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0); } }
+
+@keyframes scaledActive {
+  50%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0); } }
+
+@-webkit-keyframes scaledinActive {
+  0%, 50% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes scaledinActive {
+  0%, 50% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
 
 @media (max-width: 1040px) {
   header .mobileSVG {
@@ -856,9 +998,9 @@ header .mobileSVG {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-  .projectsPage section > img, .projectsPage section:nth-of-type(2n) img {
+  .projectsPage section > .portfolioImages, .projectsPage section:nth-of-type(2n) .portfolioImages {
     margin: 0;
-    margin: 4vh 0 8vh; }
+    margin: 4vh 0; }
   .projectsPage section > div {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
@@ -908,22 +1050,27 @@ header .mobileSVG {
     min-height: 100vh; }
   .fontButton {
     position: fixed;
-    top: 10px;
+    top: 22px;
     left: 0px;
     height: 45px;
-    font-size: 1.2rem; }
+    font-size: 1.5rem; }
   .skillsPage,
   .aboutPage,
   .contactPage,
   .projectsPage {
-    padding-top: 8vh; }
-  .hamMenu {
+    padding-top: 10vh; }
+  .hamContainer {
     display: block; }
-    .hamMenu ~ nav {
+    .hamContainer ~ nav {
       display: none; }
+  .projectsPage header .mobileSVG {
+    width: 60px;
+    min-width: 50px; }
   .skillsPage .techSkills ul {
     font-size: 4.5rem; } }
 
 @media (max-width: 400px) {
-  .hamMenu.open ~ nav ul {
-    left: 30%; } }
+  .hamContainer.open ~ nav ul {
+    left: 30%; }
+  .projectsPage .linksToProjects a {
+    margin-top: 2vh; } }
