@@ -26,6 +26,11 @@ svg, img {
     shape-rendering: geometricPrecision;
 }
 
+// body transition
+body {
+    transition: $trans;
+}
+
 // wrapper
 .maxWrapper {
     max-width: 1400px;
@@ -48,8 +53,9 @@ svg, img {
 //footer
 footer {
     display: flex;
-    justify-content: flex-start;
-    margin: 2vh;
+    justify-content: center;
+    margin: 4vh 0 2vh;
+    font-size: calc(1rem + .3vw);
 }
 
 // fixed button
@@ -75,6 +81,7 @@ header svg.mobileSVG {
 .skillsPage,
 .projectsPage,
 .contactPage {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex: 1 0 auto;
@@ -98,7 +105,7 @@ header svg.mobileSVG {
                     transition: $trans;
                 }
 
-                 #{$a-focus-hover} {
+                #{$a-focus-hover} {
                     color: $accent;
                 }
         }

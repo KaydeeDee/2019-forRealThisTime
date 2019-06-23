@@ -195,11 +195,9 @@ html {
 html {
   font-size: 62.5%; }
 
-header {
-  font-family: 'Montserrat', sans-serif; }
-  header h1,
-  header h2 {
-    font-weight: 500; }
+header h1,
+header h2 {
+  font-weight: 500; }
 
 .dxyFont {
   font-family: OpenDyslexic-Regular; }
@@ -242,6 +240,10 @@ svg, img {
   max-width: 100%;
   shape-rendering: geometricPrecision; }
 
+body {
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out; }
+
 .maxWrapper {
   max-width: 1400px;
   width: 90%;
@@ -266,10 +268,11 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  margin: 2vh; }
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 4vh 0 2vh;
+  font-size: calc(1rem + .3vw); }
 
 main button {
   position: fixed;
@@ -289,6 +292,7 @@ header svg.mobileSVG {
 .skillsPage,
 .projectsPage,
 .contactPage {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -361,7 +365,7 @@ header svg.mobileSVG {
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0; }
-  80% {
+  60% {
     opacity: .5; }
   100% {
     opacity: 1; } }
@@ -369,35 +373,14 @@ header svg.mobileSVG {
 @keyframes fadeIn {
   0% {
     opacity: 0; }
-  80% {
+  60% {
     opacity: .5; }
   100% {
     opacity: 1; } }
 
 .fadeIn {
-  -webkit-animation: fadeIn 0.8s ease-in 1 0.3s backwards;
-          animation: fadeIn 0.8s ease-in 1 0.3s backwards; }
-
-@-webkit-keyframes windowTransition {
-  0% {
-    right: 0; }
-  100% {
-    right: -100vw; } }
-
-@keyframes windowTransition {
-  0% {
-    right: 0; }
-  100% {
-    right: -100vw; } }
-
-.elementFun {
-  -webkit-animation: windowTransition 1.3s ease-in forwards;
-          animation: windowTransition 1.3s ease-in forwards;
-  position: fixed;
-  height: 100vh;
-  width: 100%;
-  background: lightgrey;
-  z-index: 10; }
+  -webkit-animation: fadeIn 0.3s ease-in 1 0.2s backwards;
+          animation: fadeIn 0.3s ease-in 1 0.2s backwards; }
 
 @-webkit-keyframes lightbulbCoil {
   100% {
@@ -428,8 +411,8 @@ header svg.mobileSVG {
   stroke-dashoffset: 730.0150146484375;
   -webkit-filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2)) blur(0.8px);
           filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2)) blur(0.8px);
-  -webkit-animation: lightbulbCoil 1.8s linear .5s 1 forwards, flickeringLight 2s ease-in 3s 1 forwards;
-          animation: lightbulbCoil 1.8s linear .5s 1 forwards, flickeringLight 2s ease-in 3s 1 forwards; }
+  -webkit-animation: lightbulbCoil 1.8s linear .5s 1 forwards, flickeringLight 1.2s ease-in 2.3s 1 forwards;
+          animation: lightbulbCoil 1.8s linear .5s 1 forwards, flickeringLight 1.2s ease-in 2.3s 1 forwards; }
 
 /* main section of lightbulb */
 @-webkit-keyframes lightbulbMain {
@@ -442,8 +425,8 @@ header svg.mobileSVG {
 .lightbulb-main {
   stroke-dasharray: 1008.9489135742188;
   stroke-dashoffset: 1008.9489135742188;
-  -webkit-animation: lightbulbMain 1.8s linear 0s 1 forwards;
-          animation: lightbulbMain 1.8s linear 0s 1 forwards; }
+  -webkit-animation: lightbulbMain 1s linear 0s 1 forwards;
+          animation: lightbulbMain 1s linear 0s 1 forwards; }
 
 /* bottom of lightbulb */
 @-webkit-keyframes lightbulbBottom {
@@ -456,14 +439,8 @@ header svg.mobileSVG {
 .lightbulb-bottom {
   stroke-dasharray: 799.3607788085938;
   stroke-dashoffset: 799.3607788085938;
-  -webkit-animation: lightbulbBottom 2s linear .5s 1 forwards;
-          animation: lightbulbBottom 2s linear .5s 1 forwards; }
-
-.red {
-  -webkit-filter: blur(5px);
-          filter: blur(5px);
-  -webkit-transition: 0.4s ease-in;
-  transition: 0.4s ease-in; }
+  -webkit-animation: lightbulbBottom 1.3s linear .5s 1 forwards;
+          animation: lightbulbBottom 1.3s linear .5s 1 forwards; }
 
 .landingPage {
   -webkit-box-flex: 1;
@@ -539,53 +516,58 @@ header svg.mobileSVG {
     -webkit-transform: rotate(20deg);
             transform: rotate(20deg); }
 
-.aboutPage {
-  position: relative; }
-  .aboutPage svg {
-    position: absolute;
-    top: -30px;
-    left: -90px; }
-    .aboutPage svg #Path-2 {
-      stroke: #ff9405; }
-  .aboutPage > div {
-    height: 80%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
-  .aboutPage section {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-top: 4vh; }
-    .aboutPage section > div {
-      -webkit-box-flex: 1;
-          -ms-flex: 1 1 70%;
-              flex: 1 1 70%;
-      margin-right: 2vw; }
-    .aboutPage section p:first-child,
-    .aboutPage section p:nth-child(2) {
-      margin-bottom: 2vh; }
-    .aboutPage section img {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 1 30%;
-              flex: 0 1 30%; }
+.aboutPage > img {
+  position: fixed;
+  bottom: -10px;
+  right: 500px;
+  -webkit-transform: rotate(0.5turn);
+          transform: rotate(0.5turn); }
+
+.aboutPage > div {
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.aboutPage section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 4vh; }
+  .aboutPage section > div {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 70%;
+            flex: 1 1 70%;
+    margin-right: 2vw; }
+  .aboutPage section p:first-child,
+  .aboutPage section p:nth-child(2) {
+    margin-bottom: 2vh; }
+  .aboutPage section img {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 30%;
+            flex: 0 1 30%; }
 
 .skillsPage header {
   margin-bottom: 2vh; }
+
+.skillsPage > img {
+  position: absolute;
+  right: -130px;
+  top: 0; }
 
 .skillsPage > div {
   height: 100%;
@@ -600,13 +582,9 @@ header svg.mobileSVG {
       -ms-flex-pack: center;
           justify-content: center; }
 
-.skillsPage main > div,
-.skillsPage .techSkills > div {
-  padding: 18px 30px;
-  background: #dedede; }
-  .skillsPage main > div > h2,
-  .skillsPage .techSkills > div > h2 {
-    font-size: calc(2rem + .8vw); }
+.skillsPage main > div > h2,
+.skillsPage .techSkills > div > h2 {
+  font-size: calc(2rem + .8vw); }
 
 .skillsPage main .flexContainer,
 .skillsPage .techSkills .flexContainer {
@@ -652,6 +630,11 @@ header svg.mobileSVG {
     margin-top: 2vh; }
     .skillsPage .techSkills ul li {
       margin: 0 2vw; }
+
+.projectsPage > img {
+  position: absolute;
+  top: 0;
+  left: -90px; }
 
 .projectsPage section {
   display: -webkit-box;
@@ -719,6 +702,10 @@ header svg.mobileSVG {
       -ms-flex-pack: center;
           justify-content: center; }
 
+.contactPage > img {
+  position: absolute;
+  left: -150px; }
+
 .contactPage section > div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -750,8 +737,7 @@ header svg.mobileSVG {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 2vh;
-  margin-left: 4vw; }
+  margin-bottom: 2vh; }
 
 .contactPage form textarea {
   resize: none; }

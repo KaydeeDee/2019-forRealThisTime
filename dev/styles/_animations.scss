@@ -4,7 +4,7 @@
     0% {
         opacity: 0;
     }
-    80% {
+    60% {
         opacity: .5;
     }
     100% {
@@ -13,27 +13,8 @@
 }
 
 .fadeIn {
-    animation: fadeIn 0.8s ease-in 1 0.3s backwards;
+    animation: fadeIn 0.3s ease-in 1 0.2s backwards;
 }
-
-// Global Screen Transition
-        @keyframes windowTransition {
-            0% {
-                right: 0;
-            }
-            100% {
-                right: -100vw;
-            }    
-        }
-
-    .elementFun {
-        animation: windowTransition 1.3s ease-in forwards;
-        position: fixed;
-        height: 100vh;
-        width: 100%;
-        background: lightgrey;
-        z-index: 10;
-    }
 
 // Landing Page Lightbulb
 
@@ -58,7 +39,7 @@
     stroke-dasharray: 730.0150146484375;
     stroke-dashoffset: 730.0150146484375;
     filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2)) blur(0.8px); 
-    animation: lightbulbCoil 1.8s linear .5s 1 forwards, flickeringLight 2s ease-in 3s 1 forwards;
+    animation: lightbulbCoil 1.8s linear .5s 1 forwards, flickeringLight 1.2s ease-in 2.3s 1 forwards;
 }
 
 
@@ -72,7 +53,7 @@
 .lightbulb-main {
     stroke-dasharray: 1008.9489135742188;
     stroke-dashoffset: 1008.9489135742188;
-    animation: lightbulbMain 1.8s linear 0s 1 forwards;
+    animation: lightbulbMain 1s linear 0s 1 forwards;
 } 
 
 /* bottom of lightbulb */
@@ -86,25 +67,5 @@
 .lightbulb-bottom {
     stroke-dasharray: 799.3607788085938;
     stroke-dashoffset: 799.3607788085938;
-    animation: lightbulbBottom 2s linear .5s 1 forwards;
-}
-
-
-
-// @keyframes testing {
-//      0%, 25%, 70% {
-//         stroke: $accent;
-//         stroke-width: 7;
-//         stroke-dashoffset: 0;
-//     }
-//     40%, 65%, 75%, 100% {
-//         stroke: pink;
-//         stroke-width: 9;
-//         stroke-dashoffset: 0;
-//     }
-// }
-
-.red {
-    filter: blur(5px);
-    transition: 0.4s ease-in;
+    animation: lightbulbBottom 1.3s linear .5s 1 forwards;
 }

@@ -1,4 +1,10 @@
 .projectsPage {
+    > img {
+        position: absolute;
+        top: 0;
+        left: -90px;
+    }
+
     section {
         display: flex;
         align-items: center;
