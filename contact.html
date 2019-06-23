@@ -51,11 +51,53 @@
                 </svg>
             </header>
             <main>
-                <form action="#">
-                    <input type="text">
-                    <input type="email" name="" id="">
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                </form>
+                <section>
+                    <div>
+                        <p> Project idea? Want to grab coffee and talk about the tech and educational sector in Canada? Send me a note using my form!
+                        </p>
+                        <p> You can also send me an email at: </p>
+                            <p class="emailAddress">
+                            <a href="mailto:hello@katiecodes.ca"> hello@<span class="antiBot">nope</span>katie<span class="antiBot">nope nope nope</span>codes.ca</a>
+                        </p>
+                        <ul class="personalInfo">
+                            <li><span>Pronouns:</span> She/Her</li>
+                            <li><span>City:</span> Toronto</li>
+                            <li><span>Languages:</span> English & French</li>
+                            <li><span>Cat's Name:</span> Cora</li>
+                        </ul>
+                        <ul class="socialContacts">
+                            <li>
+                                <a href="#" title="Click to go to my GitHub page"><i class="fab fa-github-square"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" title="Click to go to my Twitter page"><i class="fab fa-twitter-square"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" title="Click to go to my Linkedin page"><i class="fab fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <form action="https://formspree.io/hello@katiecodes.ca" method="POST">
+                        <div>
+                            <label for="userName">Your name</label>
+                            <input type="text" id="userName" minlength="2" required>
+                            <p class="warningText">Note: Name must be at least two characters long.</p>
+                        </div>
+                        
+                        <div>
+                            <label for="userEmail">Your email address</label>
+                            <input type="email" name="userEmail" id="userEmail" required>
+                            <p class="warningText">Note: The entered email must be valid in order for the form to be sent.</p>
+                        </div>
+
+                        <div>
+                            <label for="userText">Your message</label>
+                            <textarea name="userText" id="userText" cols="30" rows="10" minlength="2" required></textarea>
+                            <p class="warningText">Note: This area cannot be left empty in order for the form to be sent.</p>
+                        </div>
+                        <button>Submit</button>
+                    </form>
+                </section>
                 <button id="fontButton">Click here to use Dxy Font</button>
             </main>
         </div>

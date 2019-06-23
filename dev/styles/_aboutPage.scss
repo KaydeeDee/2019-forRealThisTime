@@ -1,8 +1,5 @@
 .aboutPage {
     position: relative;
-    flex: 1 0 auto;
-    display: flex;
-    flex-direction: column;
 
     svg {
         position: absolute;
@@ -39,28 +36,6 @@
 
         img {
             flex: 0 1 30%;
-        }
-
-        ul {
-            margin-top: 2vh;
-            display: flex;
-            font-size: calc(4rem + 1vw);
-
-            li {
-                margin: 1vw;
-            }
-
-            li:first-child {
-                margin-left: 0;
-            }
-
-            a {
-                padding: 8px;
-            }
-
-            #{$a-focus-hover} {
-                    color: $accent;
-                }
         }
     }
 }

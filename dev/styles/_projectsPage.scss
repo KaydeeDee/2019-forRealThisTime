@@ -1,0 +1,69 @@
+.projectsPage {
+    section {
+        display: flex;
+        align-items: center;
+        margin: 4vh 0;
+
+        > div {
+            flex: 0 1 70%;
+        }
+
+        img {
+            width: 420px;
+            flex-shrink: 1;
+            margin-left: 2vw;
+        }
+
+        &:nth-of-type(2n) {
+            img {
+                order: -1;
+                margin: 0;
+                margin-right: 2vw;
+            }
+        }
+
+        span {
+            color: white;
+            border-radius: 4px;
+            padding: 2px 6px;
+            display: inline-block;
+            font-size: calc(1.2rem + 0.2vw);
+        }
+
+        p, span, .linksToProjects  {
+            margin-top: 2vh;
+        }
+
+        .webDev {
+            background: rgb(49, 162, 32);
+        }
+
+        .accessibleDesign {
+            background: rgb(149, 9, 140);
+        }
+
+        .education {
+            background: rgb(9, 108, 149);
+        }
+
+        .productManagement{
+            background: rgb(149, 9, 42);
+        }
+
+        .stakeholderManagement {
+            background: rgb(224, 144, 72);
+        }
+
+        a {
+            background: $black;
+            color: $white;
+            padding: 8px 10px;
+            margin-right: 1vh;
+            transition: $trans;
+        }
+
+        #{$a-focus-hover} {
+            background: $accent;
+        }
+    }
+}

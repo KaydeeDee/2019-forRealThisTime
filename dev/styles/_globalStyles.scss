@@ -74,6 +74,10 @@ header svg.mobileSVG {
 .skillsPage,
 .projectsPage,
 .contactPage {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    
     header {
         display: flex;
         align-items: center;
@@ -102,4 +106,27 @@ header svg.mobileSVG {
     h2 {
         font-weight: 500;
     }
+}
+
+// social icons
+.socialContacts {
+            margin-top: 2vh;
+            display: flex;
+            font-size: calc(4rem + 1vw);
+
+            li {
+                margin: 1vw;
+            }
+
+            li:first-child {
+                margin-left: 0;
+            }
+
+            a {
+                padding: 8px;
+            }
+
+            #{$a-focus-hover} {
+                    color: $accent;
+                }
 }
