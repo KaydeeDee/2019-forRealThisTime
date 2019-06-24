@@ -31,8 +31,23 @@
             display: none;
         }
     }
+
+    .skillsPage {
+        .flexContainer {
+            flex-direction: column;
+
+                section {
+                    flex-basis: auto;
+                }
+        }
+
+        .essentialSkills section:nth-child(2n) {
+                margin-left: 0;
+            }
+    }
+    // end of skills page
 }
-// end of 1040px
+// end of 1039px
 
 @media (max-width:580px) {
 
@@ -68,13 +83,6 @@
 
     }
     // end of landing page
-
-    .skillsPage {
-        .essentialSkills section:nth-child(2n) {
-            margin-left: 0;
-        }
-    }
-    // end of skills page
 
     .contactPage, .aboutPage {
         .socialContacts {
@@ -116,11 +124,6 @@
     ~ nav {
             display: none;
         }
-    }
-
-    .projectsPage header .mobileSVG {
-        width: 60px;
-        min-width: 50px;
     }
 
     .skillsPage {

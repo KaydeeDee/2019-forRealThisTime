@@ -81,7 +81,7 @@ button {
         padding: 12px;
         background: $black;
         color: $white;
-        font-size: calc(1rem + 0.8vw);
+        font-size: calc(1.3rem + 0.3vw);
     }
 
 // svg in header for mobile
@@ -108,6 +108,7 @@ header .mobileSVG {
 
     nav {
         padding-bottom: 4vh;
+        text-transform: lowercase;
     }
 
     nav ul {
