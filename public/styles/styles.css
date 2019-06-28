@@ -996,6 +996,10 @@ header .mobileSVG {
     -webkit-transform: scale(1);
             transform: scale(1); } }
 
+@media (max-width: 1223px) {
+  .contactPage form {
+    margin-left: 0; } }
+
 @media (max-width: 1054px) {
   header .mobileSVG {
     display: block; }

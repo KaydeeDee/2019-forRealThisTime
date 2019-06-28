@@ -1,3 +1,8 @@
+@media (max-width: 1223px) {
+    .contactPage form {
+    margin-left: 0;
+    }
+}
 @media (max-width: 1054px) {
       // global changes
     // svg next to headers for mobile
@@ -150,5 +155,7 @@
     .linksToProjects a {
         margin-top: 2vh;
     }
+
 }
+
 }
