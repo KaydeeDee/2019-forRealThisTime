@@ -1,7 +1,5 @@
 "use strict";
 
-// const lightbulbBottomSVG = document.querySelector('.lightbulb-bottom');
-// const test = lightbulbBottomSVG.getTotalLength();
 $(function () {
   // const lightbulbBottomSVG = document.querySelector('.lightbulb-bottom');
   // const test = lightbulbBottomSVG.getTotalLength();

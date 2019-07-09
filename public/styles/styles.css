@@ -290,7 +290,8 @@ button {
   padding: 12px;
   background: #0c0c0c;
   color: #f2f2f2;
-  font-size: calc(1.3rem + 0.3vw); }
+  font-size: calc(1.3rem + 0.3vw);
+  font-family: OpenDyslexic-Regular; }
 
 header .mobileSVG {
   width: 45px;
@@ -996,7 +997,7 @@ header .mobileSVG {
     -webkit-transform: scale(1);
             transform: scale(1); } }
 
-@media (max-width: 1223px) {
+@media (max-width: 1230px) {
   .contactPage form {
     margin-left: 0; } }
 
